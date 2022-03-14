@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     /*$.ajax({
-        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=aqs.v&interval=15min&apikey=BAKR3USDB5PIKYFQ',
+        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=BLITF&interval=15min&apikey=BAKR3USDB5PIKYFQ',
         success: function(data) {
             var dataKey = 'Time Series (15min)';
             if(typeof data !== 'object' || !data[dataKey]) { return; }
@@ -76,23 +76,5 @@ function quote_search(quote) {
         $('.stock-info .stock-change').addClass('up');
     } else if (quote.change_image === 'http://a.eqcdn.com/stockpr/files/qb-change-down.gif') {
         $('.stock-info .stock-change').addClass('down');
-    }
-};
-
-// Quote Box
-function quote_search2(quote) {
-    $('.stock-info2 .stock-quote').text('$' + (Math.round(quote.last * 100) / 100).toFixed(2));
-	$('.stock-info2 .stock-date').attr('date-time',quote.last_trade_time).html(quote.last_trade_time);
-    
-    if(quote.change === "") {
-        $('.stock-info2 .stock-change').html('Updating');
-    } else {
-        $('.stock-info2 .stock-change').html('$' + (Math.round(quote.change * 100) / 100).toFixed(2) + ' <span class="stock-change__percent">(' + (Math.round(parseFloat(quote.change_pct.replace(/[\-+]/g, '')) * 100) / 100).toFixed(2) + '%)</span>');
-    }
-    
-    if (quote.change_image === 'http://a.eqcdn.com/stockpr/files/qb-change-up.gif') {
-        $('.stock-info2 .stock-change').addClass('up');
-    } else if (quote.change_image === 'http://a.eqcdn.com/stockpr/files/qb-change-down.gif') {
-        $('.stock-info2 .stock-change').addClass('down');
     }
 };
