@@ -12,7 +12,7 @@ $(document).ready(function() {
     });*/
     
         $.ajax({
-            url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=bets.cn&apikey=BAKR3USDB5PIKYFQ',
+            url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BLITF&apikey=BAKR3USDB5PIKYFQ',
             success: function(data) {
                 var dataKey = 'Time Series (Daily)';
                 if(typeof data !== 'object' || !data[dataKey]) { return; }
