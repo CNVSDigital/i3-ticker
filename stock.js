@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     /*$.ajax({
-        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=BLITF&interval=15min&apikey=BAKR3USDB5PIKYFQ',
+        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=BETS.CN&interval=15min&apikey=BAKR3USDB5PIKYFQ',
         success: function(data) {
             var dataKey = 'Time Series (15min)';
             if(typeof data !== 'object' || !data[dataKey]) { return; }
@@ -12,7 +12,7 @@ $(document).ready(function() {
     });*/
     
         $.ajax({
-            url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BLITF&apikey=BAKR3USDB5PIKYFQ',
+            url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BETS.CN&apikey=BAKR3USDB5PIKYFQ',
             success: function(data) {
                 var dataKey = 'Time Series (Daily)';
                 if(typeof data !== 'object' || !data[dataKey]) { return; }
@@ -31,7 +31,7 @@ $(document).ready(function() {
         });
     
     /*$.ajax({
-        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=BLITF&interval=15min&apikey=BAKR3USDB5PIKYFQ',
+        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=BETS.CN&interval=15min&apikey=BAKR3USDB5PIKYFQ',
         success: function(data) {
             var dataKey = 'Time Series (15min)';
             if(typeof data !== 'object' || !data[dataKey]) { return; }
@@ -42,7 +42,7 @@ $(document).ready(function() {
     });*/
 
     $.ajax({
-        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BLITF&apikey=BAKR3USDB5PIKYFQ',
+        url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BETS.CN&apikey=BAKR3USDB5PIKYFQ',
         success: function(data) {
             var dataKey = 'Time Series (Daily)';
             if(typeof data !== 'object' || !data[dataKey]) { return; }
