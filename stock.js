@@ -7,7 +7,7 @@ $(document).ready(function() {
             if(typeof data !== 'object' || !data[dataKey]) { return; }
             var keys = Object.keys(data[dataKey]);
             $(".stock-info .stock-date").text(keys[0]);
-            $(".stock-info .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(3));
+            $(".stock-info .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(2));
         }
     });*/
     
@@ -37,7 +37,7 @@ $(document).ready(function() {
             if(typeof data !== 'object' || !data[dataKey]) { return; }
             var keys = Object.keys(data[dataKey]);
             $(".stock-info2 .stock-date").text(keys[0]);
-            $(".stock-info2 .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(3));
+            $(".stock-info2 .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(2));
         }
     });*/
 
