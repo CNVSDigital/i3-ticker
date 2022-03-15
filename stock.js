@@ -20,8 +20,8 @@ $(document).ready(function() {
                 var close = data[dataKey][keys[0]]['4. close'];
                 var change = close - data[dataKey][keys[0]]['1. open'];
                 $(".stock-info .stock-date").text(keys[0]);
-                $(".stock-info .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(3));
-                $(".stock-info .stock-change").html('$' + (Math.round(change * 1000) / 1000).toFixed(3) + ' <span class="stock-change__percent">(' + (100 - Math.round((close - change) / close * 10000) / 100).toFixed(2) + '%)</span>');
+                $(".stock-info .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(2));
+                $(".stock-info .stock-change").html('$' + (Math.round(change * 1000) / 1000).toFixed(2) + ' <span class="stock-change__percent">(' + (100 - Math.round((close - change) / close * 10000) / 100).toFixed(2) + '%)</span>');
                 if(change >= 0) {
                     $(".stock-info .stock-change").addClass('up')
                 } else {
@@ -50,8 +50,8 @@ $(document).ready(function() {
             var close = data[dataKey][keys[0]]['4. close'];
             var change = close - data[dataKey][keys[0]]['1. open'];
             $(".stock-info2 .stock-date").text(keys[0]);
-            $(".stock-info2 .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(3));
-            $(".stock-info2 .stock-change").html('$' + (Math.round(change * 1000) / 1000).toFixed(3) + ' <span class="stock-change__percent">(' + (100 - Math.round((close - change) / close * 10000) / 100).toFixed(2) + '%)</span>');
+            $(".stock-info2 .stock-quote").text('$' + parseFloat(data[dataKey][keys[0]]['4. close']).toFixed(2));
+            $(".stock-info2 .stock-change").html('$' + (Math.round(change * 1000) / 1000).toFixed(2) + ' <span class="stock-change__percent">(' + (100 - Math.round((close - change) / close * 10000) / 100).toFixed(2) + '%)</span>');
             if(change >= 0) {
                 $(".stock-info2 .stock-change").addClass('up')
             } else {
